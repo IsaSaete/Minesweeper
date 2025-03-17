@@ -5,7 +5,8 @@
   "scripts": {
     "start": "serve public",
     "build": "tsc",
-    "build:dev": "tsc --watch"
+    "build:dev": "tsc --watch",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
