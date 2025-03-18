@@ -1,7 +1,9 @@
 export type Cell = {
-  status: "open" | "closed";
   hasMine: boolean;
   adjacentMinesTotal: number;
+  isOpen: boolean;
 };
 
-export type Board = Cell[][];
+export type Row = Cell[];
+
+export type Board = Row[];
