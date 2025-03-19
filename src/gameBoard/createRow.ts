@@ -1,5 +1,4 @@
-import { Row } from "../types";
-import { createCell } from "../data";
+import { Row, Cell } from "../types";
 
 export const createRow = (columns: number): Row => {
   const row: Row = [];
@@ -9,7 +8,12 @@ export const createRow = (columns: number): Row => {
   }
 
   for (let columnIndex = 0; columnIndex < columns; columnIndex++) {
-    row.push(createCell);
+    const newCell: Cell = {
+      hasMine: false,
+      adjacentMinesTotal: 0,
+      isOpen: false,
+    };
+    row.push(newCell);
   }
 
   return row;
