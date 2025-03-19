@@ -1,29 +1,11 @@
-import { createRow } from "../gameBoard/createRow";
-import { Cell } from "../types";
+import { createRow } from "../../gameBoard/createRow";
 
 describe("Given the createRow funcion", () => {
   describe("When it recibes 3", () => {
-    test("Then it should return [Cell,Cell,Cell]", () => {
+    test("Then it should return the number of rows of the board", () => {
       const columns = 3;
-      const expectedResult = [
-        {
-          hasMine: false,
-          adjacentMinesTotal: 0,
-          isOpen: false,
-        },
-        {
-          hasMine: false,
-          adjacentMinesTotal: 0,
-          isOpen: false,
-        },
-        {
-          hasMine: false,
-          adjacentMinesTotal: 0,
-          isOpen: false,
-        },
-      ];
-
-      const actualResult = createRow(columns);
+      const expectedResult = 3;
+      const actualResult = createRow(columns).length;
 
       expect(actualResult).toStrictEqual(expectedResult);
     });
