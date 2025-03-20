@@ -3,7 +3,7 @@ import { Board } from "../types.js";
 export const positionMines = (
   board: Board,
   probability: number = 0.15
-): void => {
+): Board => {
   board.forEach((row) => {
     row.forEach((cell) => {
       if (Math.random() < probability) {
@@ -11,4 +11,6 @@ export const positionMines = (
       }
     });
   });
+
+  return board;
 };

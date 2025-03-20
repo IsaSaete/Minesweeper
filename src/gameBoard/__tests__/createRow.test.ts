@@ -1,4 +1,4 @@
-import { createRow } from "../../gameBoard/createRow";
+import { createRow } from "../createRow";
 
 describe("Given the createRow funcion", () => {
   describe("When it recibes 3", () => {
@@ -7,7 +7,7 @@ describe("Given the createRow funcion", () => {
       const expectedResult = 3;
       const actualResult = createRow(columns).length;
 
-      expect(actualResult).toStrictEqual(expectedResult);
+      expect(actualResult).toBe(expectedResult);
     });
   });
 });
