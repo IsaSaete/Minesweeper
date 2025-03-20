@@ -1,5 +1,5 @@
-import { createRow } from "./createRow";
-import { Board } from "../types";
+import { createRow } from "./createRow.js";
+import { Board } from "../types.js";
 
 export const createBoard = (rows: number, columns: number): Board => {
   const board: Board = [];

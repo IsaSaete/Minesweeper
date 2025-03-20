@@ -1,6 +1,6 @@
-import { Board } from "../types";
+import { Board } from "../types.js";
 
-const placeMines = (board: Board, probability: number = 0.15): void => {
+export const placeMines = (board: Board, probability: number = 0.15): void => {
   board.forEach((row) => {
     row.forEach((cell) => {
       if (Math.random() < probability) {
