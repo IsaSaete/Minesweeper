@@ -1,4 +1,4 @@
-import { Row, Cell } from "../types";
+import { Row, Cell } from "../types.js";
 
 export const createRow = (columns: number): Row => {
   const row: Row = [];
