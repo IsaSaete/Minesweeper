@@ -1,19 +1,20 @@
 import { Row, Cell } from "../types.js";
 
 export const createRow = (columns: number): Row => {
-  const row: Row = [];
-
   if (columns < 3) {
-    throw new Error("¡Error 406:tamaño no aceptado! Elige un tamaño mayor");
+    throw new Error("¡Elige un tamaño mayor!");
   }
 
+  const row: Row = [];
+
   for (let columnIndex = 0; columnIndex < columns; columnIndex++) {
-    const newCell: Cell = {
+    const cell: Cell = {
       hasMine: false,
       adjacentMinesTotal: 0,
       isOpen: false,
     };
-    row.push(newCell);
+
+    row.push(cell);
   }
 
   return row;
