@@ -1,13 +1,13 @@
-import { Row, Cell } from "../types.js";
+import { Row, Cell } from "../../../types.js";
 
-export const createRow = (columns: number): Row => {
-  if (columns < 3) {
+export const createRow = (size: number): Row => {
+  if (size < 3) {
     throw new Error("¡Elige un tamaño mayor!");
   }
 
   const row: Row = [];
 
-  for (let columnIndex = 0; columnIndex < columns; columnIndex++) {
+  for (let columnIndex = 0; columnIndex < size; columnIndex++) {
     const cell: Cell = {
       hasMine: false,
       adjacentMinesTotal: 0,

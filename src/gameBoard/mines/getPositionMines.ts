@@ -1,6 +1,6 @@
-import { Board } from "../types.js";
+import { Board } from "../../types.js";
 
-export const positionMines = (
+export const getRandomPositionMines = (
   board: Board,
   probability: number = 0.15
 ): Board => {
