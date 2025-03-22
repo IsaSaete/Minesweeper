@@ -18,7 +18,7 @@ export const renderBoard = (board: Board): void => {
 
       if (cell.hasMine === true) {
         cellElement.innerHTML =
-          "<img class=mario-mine src=/images/supermario_mine.svg alt=mario-mine width=20 heigth=28>";
+          "<img class=mario-mine src=/images/mine_black.svg alt=mario-mine width=20 heigth=28>";
       }
 
       const listElement = document.createElement("li");
