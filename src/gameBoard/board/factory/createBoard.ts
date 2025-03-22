@@ -1,5 +1,5 @@
-import { createRow } from "./createRow.js";
-import { Board } from "../types.js";
+import { createRow } from "../../row/factory/createRow.js";
+import { Board } from "../../../types.js";
 
 export const createBoard = (size: number): Board => {
   const rows = size;

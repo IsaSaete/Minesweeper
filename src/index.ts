@@ -1,5 +1,5 @@
-import { createBoard } from "./gameBoard/createBoard.js";
-import { positionMines } from "./gameBoard/positionMines.js";
+import { createBoard } from "./gameBoard/board/factory/createBoard.js";
+import { getRandomPositionMines } from "./gameBoard/mines/getPositionMines.js";
 
 const gameBoard = createBoard(6);
-positionMines(gameBoard);
+getRandomPositionMines(gameBoard);
