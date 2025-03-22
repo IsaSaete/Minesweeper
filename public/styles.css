@@ -67,5 +67,6 @@ body {
 }
 
 .mario-mine {
+  visibility: hidden;
   width: 100%;
 }
