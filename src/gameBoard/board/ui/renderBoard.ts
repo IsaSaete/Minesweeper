@@ -15,13 +15,13 @@ export const renderBoard = (board: Board): void => {
       const cellElement = document.createElement("button");
       cellElement.ariaLabel = "board cell";
       cellElement.className = "cell";
+
       if (cell.hasMine === true) {
         cellElement.innerHTML =
           "<img class=mario-mine src=/images/supermario_mine.svg alt=mario-mine width=20 heigth=28>";
       }
 
       const listElement = document.createElement("li");
-      listElement.className = "cells";
       listElement.appendChild(cellElement);
       boardElement.appendChild(listElement);
     });
