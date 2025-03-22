@@ -22,3 +22,29 @@ body {
   font-size: 2rem;
   color: #0ff;
 }
+
+.board-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0;
+}
+
+.cells {
+  list-style: none;
+}
+
+.cell {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
