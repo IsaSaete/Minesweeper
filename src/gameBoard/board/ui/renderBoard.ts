@@ -18,11 +18,22 @@ export const renderBoard = (board: Board): void => {
 
       if (cell.hasMine === true) {
         cellElement.innerHTML =
-          "<img class=mario-mine src=/images/mine_black.svg alt=mario-mine width=20 heigth=28>";
+          "<img class='hidden mine-black' src=/images/mine_black.svg alt=mario-mine width=34 heigth=34>";
+      }
+
+      if (!cell.hasMine) {
+        const adjacentMinesTotalElement = document.createElement("span");
+        adjacentMinesTotalElement.textContent =
+          cell.adjacentMinesTotal.toString();
+
+        adjacentMinesTotalElement.className = "hidden";
+
+        cellElement.appendChild(adjacentMinesTotalElement);
       }
 
       const listElement = document.createElement("li");
       listElement.appendChild(cellElement);
+
       boardElement.appendChild(listElement);
     });
   });
