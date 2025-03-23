@@ -12,6 +12,7 @@ export const createRow = (size: number): Row => {
       hasMine: false,
       adjacentMinesTotal: 0,
       isOpen: false,
+      columnIndex: columnIndex,
     };
 
     row.push(cell);

@@ -9,6 +9,11 @@ export const createBoard = (size: number): Board => {
 
   for (let rowIndex = 0; rowIndex < rows; rowIndex++) {
     const row = createRow(columns);
+
+    row.forEach((cell) => {
+      cell.rowIndex = rowIndex;
+    });
+
     board.push(row);
   }
 
