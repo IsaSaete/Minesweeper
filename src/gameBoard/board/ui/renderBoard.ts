@@ -1,4 +1,4 @@
-import { Board } from "../../../types";
+import { Board } from "../../../types.js";
 
 export const renderBoard = (board: Board): void => {
   const boardContainerElement = document.querySelector(".board-container");
@@ -17,12 +17,22 @@ export const renderBoard = (board: Board): void => {
       cellElement.className = "cell";
 
       if (cell.hasMine === true) {
-        cellElement.innerHTML =
-          "<img class=mario-mine src=/images/mine_black.svg alt=mario-mine width=20 heigth=28>";
+        cellElement.innerHTML = `<img class="hidden mine-black" src="/images/mine_black.svg" alt="Icono de una bomba del juego minesweeper" width=38" height="38">`;
+      }
+
+      if (!cell.hasMine) {
+        const adjacentMinesTotalElement = document.createElement("span");
+        adjacentMinesTotalElement.textContent =
+          cell.adjacentMinesTotal.toString();
+
+        adjacentMinesTotalElement.className = "hidden";
+
+        cellElement.appendChild(adjacentMinesTotalElement);
       }
 
       const listElement = document.createElement("li");
       listElement.appendChild(cellElement);
+
       boardElement.appendChild(listElement);
     });
   });
