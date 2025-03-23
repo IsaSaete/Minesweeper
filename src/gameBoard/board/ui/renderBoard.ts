@@ -17,7 +17,8 @@ export const renderBoard = (board: Board): void => {
       cellElement.className = "cell";
 
       if (cell.hasMine === true) {
-        cellElement.innerHTML = `<img class="hidden mine-black" src="/images/mine_black.svg" alt="Icono de una bomba del juego minesweeper" width=38" height="38">`;
+        cellElement.innerHTML = `<img class="hidden mine-black" src="/images/mine_black.svg" 
+        alt="Icono de una bomba del juego minesweeper" width=38" height="38">`;
 
         const imageCellElement = cellElement.querySelector(".hidden");
 
