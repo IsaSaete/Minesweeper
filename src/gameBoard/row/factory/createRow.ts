@@ -20,5 +20,3 @@ export const createRow = (size: number): Row => {
 
   return row;
 };
-
-createRow(3);
