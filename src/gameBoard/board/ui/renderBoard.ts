@@ -18,16 +18,26 @@ export const renderBoard = (board: Board): void => {
 
       if (cell.hasMine === true) {
         cellElement.innerHTML = `<img class="hidden mine-black" src="/images/mine_black.svg" alt="Icono de una bomba del juego minesweeper" width=38" height="38">`;
+
+        const imageCellElement = cellElement.querySelector(".hidden");
+
+        cellElement.addEventListener("click", () => {
+          if (imageCellElement) {
+            imageCellElement.classList.remove("hidden");
+          }
+        });
       }
 
       if (!cell.hasMine) {
         const adjacentMinesTotalElement = document.createElement("span");
         adjacentMinesTotalElement.textContent =
           cell.adjacentMinesTotal.toString();
-
         adjacentMinesTotalElement.className = "hidden";
-
         cellElement.appendChild(adjacentMinesTotalElement);
+
+        cellElement.addEventListener("click", () => {
+          adjacentMinesTotalElement.classList.remove("hidden");
+        });
       }
 
       const listElement = document.createElement("li");
